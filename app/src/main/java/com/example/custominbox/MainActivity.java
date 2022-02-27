@@ -98,10 +98,13 @@ public class MainActivity extends AppCompatActivity implements CTInboxListener {
         findViewById(R.id.unreadall).setOnClickListener(v->{
             ArrayList<CTInboxMessage> test =  clevertapDefaultInstance.getUnreadInboxMessages();
             String unreadmsg= "";
-            for(int i = 0;i<clevertapDefaultInstance.getInboxMessageUnreadCount();i++) {
-                unreadmsg += "Inbox Message "+ i +"\nTitle "+test.get(i).getInboxMessageContents().get(0).getTitle()
-                        +"\nMessage " + test.get(i).getInboxMessageContents().get(0).getMessage()+"\n";
+            if(clevertapDefaultInstance.getInboxMessageUnreadCount()>0) {
+                for (int i = 0; i < clevertapDefaultInstance.getInboxMessageUnreadCount(); i++) {
+                    unreadmsg += "Inbox Message " + i + "\nTitle " + test.get(i).getInboxMessageContents().get(0).getTitle()
+                            + "\nMessage " + test.get(i).getInboxMessageContents().get(0).getMessage() + "\n";
+                }
             }
+            else{unreadmsg= "No unread Messages";}
             Text1.setText(unreadmsg);
         });
     }
