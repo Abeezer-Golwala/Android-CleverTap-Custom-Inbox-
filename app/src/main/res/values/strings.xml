@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">CustomInbox</string>
+    <string name="default_inbox">Default Inbox</string>
+    <string name="custom_inbox">Custom Inbox</string>
+    <string name="enter_message_id">Enter Message Id</string>
+    <string name="message_count">Message Count</string>
+</resources>

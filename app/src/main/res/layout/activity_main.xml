@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/text1"
+            android:text="@string/message_count"
+            android:textSize="25sp"/>
+        <Button
+            android:id="@+id/dfin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/text1"
+            android:text="@string/default_inbox" />
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/dfin"
+            android:layout_below="@+id/text1"
+            android:id="@+id/getmsg"
+            android:text="Get Message"/>
+        <Button
+            android:id="@+id/btci"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/dfin"
+            android:text="Get All Message" />
+
+        <Button
+            android:id="@+id/sm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/dfin"
+            android:layout_alignParentRight="true"
+            android:layout_toRightOf="@id/btci"
+            android:text="Get First Message" />
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/cnt"
+            android:layout_below="@+id/sm"
+            android:text="All message Count"/>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/unct"
+            android:layout_toRightOf="@+id/cnt"
+            android:layout_below="@+id/sm"
+            android:text="Unread Message Count"/>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/unreadall"
+            android:layout_below="@+id/cnt"
+            android:text="All Unread Messages"/>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/dlm"
+            android:layout_toRightOf="@+id/msgread"
+            android:layout_below="@+id/unreadall"
+            android:text="Delete Message" />
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/unreadall"
+            android:id="@+id/msgread"
+            android:text="Mark As Read" />
+
+    </RelativeLayout>
+</ScrollView>
